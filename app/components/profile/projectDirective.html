@@ -1,0 +1,17 @@
+<div class="container" style="width: inherit">
+    <h2>Projects you're in </h2>
+
+
+    <table class="table table-striped">
+        <thead>
+        <tr >
+            <th ng-repeat = "row in profile.project.rows">{{row}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat = "column in profile.project.columns">
+            <td >{{ column.tag}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

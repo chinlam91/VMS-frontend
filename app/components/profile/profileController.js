@@ -5,9 +5,26 @@
 app.controller('profileController', function () {
     this.volunteer = volunteer;
     this.profile = profile;
+    this.project = project;
 
 
 });
+
+
+var project = {
+
+    rows: ['#', 'Project Name', 'Manager', 'Details', 'Cancel'],
+    columns: {
+
+        tag: 1,
+        projectName: 'Food furveillance',
+        manager: 'Water Resources Agency',
+        detail: ''
+
+    }
+
+};
+
 
 //left bar volunteer info
 var volunteer = {
@@ -16,11 +33,11 @@ var volunteer = {
     introduction: "I'm a genius. I work on Data science/analytics and have excellent skills with Matlab and Ruby programming. My hobbies is sporting.",
     participating: "3",
     participated: "8",
-    };
+};
 //array for volunteer profile
 
 var profile = {
-    about:{
+    about: {
         firstName: "Lin",
         lastName: "Jim",
         userName: "jimlin",
@@ -45,7 +62,7 @@ var profile = {
         school: "NCKU",
         schoolDate: "2012-2014"
     },
-    skills:["Swimming","Programming"],
+    skills: ["Swimming", "Programming"],
     equipments: ["Car", "Scooter", "Camera"]
 
 };
