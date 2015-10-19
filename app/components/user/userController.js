@@ -10,6 +10,36 @@ app.controller('MainController', ['$scope','$http', function ($scope, $http) {
 
     $scope.response = null;
 
+    $scope.loginButton=function(){
+
+
+        $http({
+            method: 'POST',
+            url: 'https://vms-dev.herokuapp.com/api/auth',
+            headers: {
+                'Host': 'vms.app',
+                'Content-Type': 'application/json',
+                'X-VMS-API-Key': 'd6527aa8bcf55187490154283e4d2a1a268a94ead2322f883276a7c3cb52cd09',
+            },
+            data: {
+                "username":'jimlin',
+                "password":'MYPASSWORD'
+            }
+        }).then(function successCallback(response) {
+            //   return response.data;
+            alert(response.status);
+            // alert(response.data.toJSON);
+
+
+        }, function errorCallback(response) {
+
+            alert('Error'+ response.status);
+
+            alert(response.data.toJSON);
+        });
+    };
+
+
     $scope.SignUp = function () {
         $http({
             method: 'POST',
@@ -17,10 +47,10 @@ app.controller('MainController', ['$scope','$http', function ($scope, $http) {
             headers: {
                 'Host': 'vms.app',
                 'Content-Type': 'application/json',
-                'X-VMS-API-Key': 'd6527aa8bcf55187490154283e4d2a1a268a94ead2322f883276a7c3cb52cd09',
+                'X-VMS-API-Key': '581dba93a4dbafa42a682d36b015d8484622f8e3543623bec5a291f67f5ddff1',
             },
             data: {
-                "username": "jimlin",
+                "username": "test3",
                 "password": "MYPASSW0RD",
                 "first_name": "Lin",
                 "last_name": "Jim",
@@ -33,15 +63,21 @@ app.controller('MainController', ['$scope','$http', function ($scope, $http) {
                 },
                 "address": "128 Academia Road, Section 2, Nankang Dist.",
                 "phone_number": "0912345678",
-                "email": "jimlin@citi.sinica.edu.tw",
+                "email": "test3@citi.sinica.edu.tw",
                 "emergency_contact": "Jeremy Lin",
                 "emergency_phone": "0919119119"
             }
         }).then(function successCallback(response) {
-           alert(response.status);
+         //   return response.data;
+            alert(response.status);
+           // alert(response.data.toJSON);
+
+
         }, function errorCallback(response) {
 
             alert('Error'+ response.status);
+
+            alert(response.data.toJSON);
         });
     };
 }]);
