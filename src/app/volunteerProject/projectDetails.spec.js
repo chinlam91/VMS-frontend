@@ -17,17 +17,17 @@
                 var controller = $controller('projectController', {
                     $scope: $scope
                 });
-                expect($scope.projects).toBeDefined();
-                expect($scope.volunteers).toBeDefined();
-                expect($scope.manager).toBeDefined();
-                expect($scope.managerMail).toBeDefined();
-                expect($scope.createdDate).toBeDefined();
-                expect($scope.description).toBeDefined();
-                expect($scope.link).toBeDefined();
-                expect($scope.position).toBeDefined();
-                expect($scope.students).toBeDefined();
-                expect($scope.school).toBeDefined();
-                expect($scope.participated).toBeDefined();
+                expect(controller.projects).toBeDefined();
+                expect(controller.volunteers).toBeDefined();
+                expect(controller.manager).toBeDefined();
+                expect(controller.managerMail).toBeDefined();
+                expect(controller.createdDate).toBeDefined();
+                expect(controller.description).toBeDefined();
+                expect(controller.link).toBeDefined();
+                expect(controller.position).toBeDefined();
+                expect(controller.students).toBeDefined();
+                expect(controller.school).toBeDefined();
+                expect(controller.participated).toBeDefined();
             });
         });
 
